@@ -41,7 +41,9 @@
     "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
+    "material-ui": "^0.15.0-beta.2",
     "react": "^15.0.1",
-    "react-dom": "^15.0.1"
+    "react-dom": "^15.0.1",
+    "react-tap-event-plugin": "^1.0.0"
   }
 }
