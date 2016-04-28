@@ -10,7 +10,7 @@ export default class MealContainer extends Component {
 		}
 	}
 
-  componentDidMount() {
+	componentDidMount() {
     console.log(this.props);
     //Emulando um Ajax para nossa futura API
     setTimeout(() => {
