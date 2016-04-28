@@ -1,0 +1,8 @@
+CACHE MANIFEST
+#ver:v1
+
+CACHE:
+/bundle.js
+
+NETWORK:
+*
