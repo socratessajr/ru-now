@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, cloneElement } from 'react'
 import AppLayout from '../components/AppLayout'
 
 export default class AppContainer extends Component {
@@ -19,7 +19,9 @@ export default class AppContainer extends Component {
 
 	render() {
 		return	(
-			<AppLayout {...this.state} />
+			<AppLayout {...this.state}>
+				{ cloneElement(this.props.children, {...this.state}) }
+			</AppLayout>
 		)
 	}
 

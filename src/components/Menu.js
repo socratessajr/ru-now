@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DropDownMenu from 'material-ui/DropDownMenu';
 import MenuItem from 'material-ui/MenuItem';
+import { Link } from 'react-router'
 
 export default class Menu extends Component {
 
@@ -14,11 +15,14 @@ export default class Menu extends Component {
   render() {
     return (
       <DropDownMenu value={this.state.value} onChange={this.handleChange}>
-        <MenuItem value={1} primaryText="Never"/>
-        <MenuItem value={2} primaryText="Every Night"/>
-        <MenuItem value={3} primaryText="Weeknights"/>
-        <MenuItem value={4} primaryText="Weekends"/>
-        <MenuItem value={5} primaryText="Weekly"/>
+        <Link to="/">
+          <MenuItem value={1} primaryText="Restaurante Universitário"/>
+        </Link>
+        <MenuItem value={2} primaryText="Restaurante Espaço Multiuso"/>
+        <MenuItem value={3} primaryText="Login/Cadastrar"/>
+        <Link to="/about">
+          <MenuItem value={4} primaryText="Sobre o app" />
+        </Link>
       </DropDownMenu>
     );
   }
