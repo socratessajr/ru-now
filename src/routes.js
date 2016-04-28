@@ -1,12 +1,16 @@
 import React from 'react'
-import { Router, Route, Link, browserHistory } from 'react-router'
+import { Route, IndexRoute } from 'react-router'
 import AppContainer from './containers/AppContainer'
-import MealLayout from './components/MealLayout'
+import MealContainer from './containers/MealContainer'
 import About from './components/About'
+import NotFound from './components/NotFound'
 
 export default (
-	    <Route component={AppContainer}>
-	    	<Route path="/" component={MealLayout}></Route>
-	    	<Route path="/about" component={About}></Route>
-	    </Route>
+	<Route component={AppContainer}>
+		<Route path="/" component={MealContainer} />
+		<Route path="/ru(/:nextMeal)" component={MealContainer} />
+		<Route path="/mu(/:nextMeal)" component={MealContainer} />
+		<Route path="/about" component={About} />
+		<Route path="*" component={NotFound} />
+	</Route>
 )

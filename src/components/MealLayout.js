@@ -6,7 +6,7 @@ import Stars from './Stars'
 import Tabs from './Tabs'
 import CommentBox from './CommentBox'
 
-const MealLayout = ({isLogged, userData, time}) =>  {
+const MealLayout = ({isLogged, userData, time }) =>  {
     return (
       <div>
         <Meal />
