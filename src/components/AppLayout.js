@@ -8,10 +8,11 @@ import Stars from './Stars'
 import Tabs from './Tabs'
 import CommentBox from './CommentBox'
 
-const App = ({}) =>  {
+const AppLayout = ({isLogged, userData, time}) =>  {
     return (
       <div>
-        <LineContainer />
+        <h1>Relogio: {Math.floor(time / 1000 % 60)}</h1>
+        <LineContainer time={time} />
         <Menu />
         <Meal />
         <MealList />
@@ -23,4 +24,4 @@ const App = ({}) =>  {
     )
 }
 
-export default App
+export default AppLayout
